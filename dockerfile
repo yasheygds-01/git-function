@@ -11,7 +11,7 @@ COPY requirements.txt requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the rest of the application code
-COPY main.py main.py
+COPY main.py main.py 
 
 # Run main.py with a sample event by default
 CMD ["python", "main.py", "--sample", "--json", "--bucket", 
