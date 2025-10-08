@@ -14,6 +14,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY main.py main.py 
 
 # Run main.py with a sample event by default
-CMD ["python", "main.py", "--sample", "--json", "--bucket", 
-    "--name", "--metageneration", "--timeCreated", "--updated", 
-    "--event-id", "--event-type"]
+# CMD ["python", "main.py", "--sample", "--json", "--bucket", 
+#     "--name", "--metageneration", "--timeCreated", "--updated", 
+#     "--event-id", "--event-type"]
+
+CMD ["python", "main.py"]
