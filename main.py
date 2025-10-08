@@ -1,3 +1,4 @@
+import logging
 import functions_framework
 import argparse
 import json
@@ -17,13 +18,15 @@ def hello_gcs(cloud_event):
     timeCreated = data["timeCreated"]
     updated = data["updated"]
 
-    print(f"Event ID: {event_id}")
-    print(f"Event type: {event_type}")
-    print(f"Bucket: {bucket}")
-    print(f"File: {name}")
-    print(f"Metageneration: {metageneration}")
-    print(f"Created: {timeCreated}")
-    print(f"Updated: {updated}")
+    logging.info("=============== CODE LOG ===================")
+    logging.info(f"Event ID: {event_id}")
+    logging.info(f"Event type: {event_type}")
+    logging.info(f"Bucket: {bucket}")
+    logging.info(f"File: {name}")
+    logging.info(f"Metageneration: {metageneration}")
+    logging.info(f"Created: {timeCreated}")
+    logging.info(f"Updated: {updated}")
+    logging.info("===========================================")
 
 if __name__ == "__main__":
     # Simple local runner to invoke hello_gcs with required args
